@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Linking External CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Hidden heading (for accessibility, styling purposes) -->
+    <h3 style="opacity: 0%;">form</h3>
+
+    <!-- Form Container -->
+    <div class="form-controller">
+        <form action="#">
+            
+            <!-- Name Input Field -->
+            <label for="name">Enter name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <!-- Email Input Field -->
+            <label for="email">Enter email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <!-- Phone Number Input Field -->
+            <label for="phone">Enter phone:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone" required>
+
+            <!-- Password Input Field -->
+            <label for="password">Enter password:</label>
+            <input type="password" id="password" placeholder="Enter a strong password" required>
+
+            <!-- Qualification Selection Dropdown -->
+            <label for="qualification">Select qualification:</label>
+            <select id="qualification">
+                <option>High School</option>
+                <option>Bachelor Degree</option>
+                <option>Masters Degree</option>
+                <option>PhD</option>
+            </select>
+
+            <!-- Gender Selection (Radio Buttons) -->
+            <label>Select gender: </label>
+            <input type="radio" name="gender" id="male"> Male
+            <input type="radio" name="gender" id="female"> Female
+            <input type="radio" name="gender" id="other"> Others
+
+            <!-- Message Textarea -->
+            <label for="message" class="msg-cntrl">Message:</label>
+            <textarea id="message" placeholder="Enter your message"></textarea>
+
+            <!-- Date of Birth Input -->
+            <label for="dob">Date of birth:</label>
+            <input type="date" id="dob">
+
+            <!-- File Upload for Resume -->
+            <label for="resume">Upload a resume:</label>
+            <input type="file" id="resume">
+
+            <!-- Color Picker -->
+            <label for="fav-color">Choose your favorite color:</label>
+            <input type="color" id="fav-color" class="color-control">
+
+            <!-- Newsletter Subscription -->
+            <div class="sub">
+                <label for="subscribe">Subscribe to newsletter:</label>
+                <input type="checkbox" id="subscribe">
+            </div>
+
+            <!-- Reset and Submit Buttons -->
+            <input type="reset" value="Reset" class="reset-btn">
+            <input type="submit" value="Submit" class="submit-btn">
+
+        </form>
+    </div>
+
+    <!-- Hidden footer text (for styling purposes) -->
+    <h4 style="opacity: 0%;">end</h4>
+
+</body>
+</html>

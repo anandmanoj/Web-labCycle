@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.paraone{
+    text-align: center;
+    padding: 30px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(240, 150, 4, 0.6);
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+
