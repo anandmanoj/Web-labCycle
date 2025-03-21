@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let phone = document.getElementById("phone").value.trim();
+            let password = document.getElementById("password").value;
+            let gender = document.querySelector("input[name='gender']:checked");
+            let dob = document.getElementById("dob").value;
+            let resume = document.getElementById("resume").value;
+
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let phonePattern = /^[0-9]{10}$/;
+            let passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+            let today = new Date().toISOString().split("T")[0];
+
+            if (name === "") {
+                alert("Name cannot be empty");
+                return false;
+            }
+            if (!emailPattern.test(email)) {
+                alert("Enter a valid email address");
+                return false;
+            }
+            if (!phonePattern.test(phone)) {
+                alert("Enter a valid 10-digit phone number");
+                return false;
+            }
+            if (!passwordPattern.test(password)) {
+                alert("Password must be at least 8 characters long and contain letters and numbers");
+                return false;
+            }
+            if (!gender) {
+                alert("Please select your gender");
+                return false;
+            }
+            if (dob === "") {
+                alert("Please select your date of birth");
+                return false;
+            }
+            if (dob > today) {
+                alert("Date of birth cannot be in the future");
+                return false;
+            }
+            if (resume === "") {
+                alert("Please upload your resume");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h3 style="opacity: 0%">form</h3>
+    <div class="form-controller">
+        <form onsubmit="return validateForm(event)">
+            <label for="name">Enter name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Enter email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="phone">Enter phone:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone" required>
+
+            <label for="password">Enter password:</label>
+            <input type="password" id="password" placeholder="Enter a strong password" required>
+
+            <label for="qualification">Select qualification:</label>
+            <select id="qualification">
+                <option>High School</option>
+                <option>Bachelor Degree</option>
+                <option>Masters Degree</option>
+                <option>PhD</option>
+            </select>
+
+            <label>Select gender: </label>
+            <input type="radio" name="gender" id="male"> Male
+            <input type="radio" name="gender" id="female"> Female
+            <input type="radio" name="gender" id="other"> Others
+
+            <label for="message" class="msg-cntrl">Message:</label>
+            <textarea id="message" placeholder="Enter your message"></textarea>
+
+            <label for="dob">Date of birth:</label>
+            <input type="date" id="dob">
+
+            <label for="resume">Upload a resume:</label>
+            <input type="file" id="resume">
+
+            <label for="fav-color">Choose your favorite color:</label>
+            <input type="color" id="fav-color" class="color-control">
+
+            <div class="sub">
+                <label for="subscribe">Subscribe to newsletter:</label>
+                <input type="checkbox" id="subscribe">
+            </div>
+
+            <input type="reset" value="Reset" class="reset-btn">
+            <input type="submit" value="Submit" class="submit-btn">
+        </form>
+    </div>
+    <h4 style="opacity: 0%">end</h4>
+</body>
+</html>

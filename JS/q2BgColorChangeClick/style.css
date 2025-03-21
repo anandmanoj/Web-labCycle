@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+body {
+    text-align: center;
+    font-family: 'Poppins', sans-serif; /* Stylish modern font */
+    padding: 50px;
+    transition: background-color 0.5s ease;
+}
+
+/* Styling for the button */
+button {
+padding: 12px 25px;
+font-size: 18px;
+font-weight: bold;
+color: white;
+background: linear-gradient(45deg, #ff6b6b, #556270);
+border: none;
+border-radius: 30px;
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+background: linear-gradient(45deg, #556270, #ff6b6b);
+transform: scale(1.1);
+}

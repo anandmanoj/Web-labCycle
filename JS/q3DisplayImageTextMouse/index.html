@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover to Change Image and Text</title>
+    <style>
+        /* Basic styling for the page */
+        body {
+            text-align: center;
+            font-family: 'Poppins', sans-serif; /* Stylish modern font */
+            padding: 50px;
+            transition: background-color 0.5s ease;
+        }
+        
+        /* Styling for the image */
+        #displayImage {
+            width: 400px;
+            height: 400px;
+            margin-top: 20px;
+            transition: opacity 0.5s ease;
+        }
+
+        /* Styling for the text */
+        #displayText {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: opacity 0.5s ease;
+        }
+    </style>
+    
+    <!-- Google Fonts for stylish font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Hover over the text below to change image and message</h1>
+    
+    <p id="hoverText" style="cursor: pointer; font-size: 22px; font-weight: bold;">Hover over me!</p>
+    <p id="displayText">Original Text</p>
+    
+    <!-- Using local images -->
+    <img id="displayImage" src="image1.jpg" alt="Original Image">
+    
+    <script>
+        // Selecting elements
+        const hoverText = document.getElementById("hoverText");
+        const displayText = document.getElementById("displayText");
+        const displayImage = document.getElementById("displayImage");
+
+        // Event listener for mouseover
+        hoverText.addEventListener("mouseover", function() {
+            displayText.textContent = "New Hovered Text!";
+            displayImage.src = "image2.jpg"; // Change to second local image
+        });
+
+        // Event listener for mouseout to revert changes
+        hoverText.addEventListener("mouseout", function() {
+            displayText.textContent = "Original Text";
+            displayImage.src = "image1.jpg"; // Revert to original image
+        });
+    </script>
+</body>
+</html>

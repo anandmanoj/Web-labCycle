@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background: #121212;
+}
+
+form {
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid rgba(255, 102, 0, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(255, 102, 0, 0.5);
+    color: #ff6600;
+    
+}
+input, select, textarea {
+    
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid rgba(255, 102, 0, 0.5);
+    border-radius: 8px;
+    outline: none;
+    background: rgba(255, 102, 0, 0.1);
+    color: orange;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+
+
+
+input[type="radio"], input[type="checkbox"] {
+    
+    width: auto;
+}
+input[type="submit"], input[type="reset"] {
+    width: 100px;
+}
+
+.color-control{
+    width: 50px;
+    border-radius: 50px;
+}
+
+.submit-btn{
+    border-radius: 50px;
+    color:white;
+    background-color: rgb(195, 73, 7);
+    font-weight: bold;
+    border-color:white;
+}
+
+.reset-btn{
+    border-radius: 50px;
+    color:white;
+    font-weight: bold;
+    border-color:white ;
+}
+
+.msg-cntrl{
+    display: block;
+    margin-top: 10px;
+
+}
+
+.sub{
+    margin-bottom: 10px;
+}
+
+.form-controller{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   margin: 0;
+   background: #121212;
+}
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+    <link rel="stylesheet" href="style.css">
+    
+    
+    <!-- Google Fonts for stylish font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Click the Button to Change Background Color</h1>
+    
+    <!-- Button to trigger background color change -->
+    <button id="colorButton">Change Color</button>
+    
+    <script>
+        // Array of colors to cycle through
+        const colors = ["#FF5733", "#33FF57", "#3357FF", "#F3FF33", "#FF33A8"];
+        let index = 0; // Index to keep track of current color
+
+        // Event listener for button click
+        document.getElementById("colorButton").addEventListener("click", function() {
+            // Change the background color of the page with smooth transition
+            document.body.style.backgroundColor = colors[index];
+            
+            // Update the index to get the next color in the array
+            index = (index + 1) % colors.length;
+        });
+    </script>
+</body>
+</html>
